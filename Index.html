@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein synthesizer</title>
+    <style>
+        div {border: 2px solid green;
+        padding: 2px;}
+        .protein-chain {display: flex;
+        flex-direction: row;}
+        span{align-content: flex-start;
+        padding-top: 2px;}
+    </style>
+</head>
+<body>
+    <form id="dna-form">
+        <label for="dna-field">DNA sequence:</label>
+        <input type="text" name="dna-field" placeholder="Enter your DNA sequence">
+        <button>Synthesize protein</button>
+    </form>
+    <br>
+    <div class="protein-chain"></div>
+    <script src="script.js"></script>
+</body>
+</html>
