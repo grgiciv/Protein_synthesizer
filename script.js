@@ -2,7 +2,7 @@ const dnaFormElement = document.querySelector("#dna-form");
 
 dnaFormElement.addEventListener('submit', function(event){
     event.preventDefault();
-    const DNAinput = event.target.querySelector('[name="dna-field"]').value.split('');
+    const DNAinput = event.target.querySelector('[name="dna-field"]').value.toUpperCase().split('');
     const regex = /[ATCG]/;
     let result = regex.test(DNAinput);
     if (result) {
