@@ -7,7 +7,7 @@ Protein synthesis consists of 3 steps:
 2. Translation - a process in which mRNA is translated into polypeptide chain.
 3. Protein folding and post-translational modifications - processes in which protein gets its final form (not covered by this app).
 ### Transcription
-Transcription is the process of copying a segment of DNA into RNA. The segments of DNA transcribed into RNA molecules that can encode proteins are said to produce messenger RNA (mRNA).  return
+Transcription is the process of copying a segment of DNA into RNA. The segments of DNA transcribed into RNA molecules that can encode proteins are said to produce messenger RNA (mRNA).<br>
 The app takes user input of DNA and uses function *mRNAtranscription* which loops thorugh DNA array and exchanges T, C, G, A for A, G, C, U.
 ### Translation
 Translation is the process in which ribosomes synthesize proteins after the process of transcription of DNA to RNA. Messenger RNA (mRNA) is decoded in a ribosome to produce a specific amino acid chain, or polypeptide. The polypeptide later folds into an active protein and performs its functions in the cell. The ribosome facilitates decoding by inducing the binding of complementary tRNA anticodon sequences to mRNA codons.
