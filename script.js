@@ -1,7 +1,9 @@
 const dnaFormElement = document.querySelector("#dna-form");
+const proteinChain = document.querySelector('.protein-chain');
 
 dnaFormElement.addEventListener('submit', function(event){
     event.preventDefault();
+    proteinChain.innerHTML = '';
     const DNAinput = event.target.querySelector('[name="dna-field"]').value.toUpperCase().split('');
     const regex = /[ATCG]/;
     let result = regex.test(DNAinput);
@@ -10,6 +12,7 @@ dnaFormElement.addEventListener('submit', function(event){
     } else {
         alert("Please use only characters A, T, G or C");
     }
+    document.getElementsByName("dna-field")[0].value = '';
 });
 
 
@@ -169,8 +172,8 @@ function proteinSynthesis(nucleicAcid){
     return protein;
 }
 
-/**Create new amino acid in chain
- * Creates new html elements that contain images of amino acids.
+/**Creates new amino acid in chain
+ * Creates new html elements that contains images of amino acids.
  * @param {String} source represents file pathway
  */
 function newAminoAcid(source){

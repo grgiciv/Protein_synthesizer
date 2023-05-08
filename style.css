@@ -1,0 +1,13 @@
+.protein-chain {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid green;
+    padding: 5px;
+    width: fit-content;
+    overflow: visible;
+}
+
+span {
+    align-content: flex-start;
+    padding-top: 2px;
+}
