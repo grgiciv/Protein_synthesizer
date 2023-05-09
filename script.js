@@ -1,5 +1,6 @@
 const dnaFormElement = document.querySelector("#dna-form");
 const proteinChain = document.querySelector('.protein-chain');
+const captions = ["Ala", "Arg", "Asn", "Asp", "Cys", "Gln", "Glu", "Gly", "His", "Ile", "Leu", "Lys", "Met", "Phe", "Pro", "Ser", "Thr", "Trp", "Tyr", "Val", "STOP"];
 
 dnaFormElement.addEventListener('submit', function(event){
     event.preventDefault();
@@ -176,11 +177,15 @@ function proteinSynthesis(nucleicAcid){
  * Creates new html elements that contains images of amino acids.
  * @param {String} source represents file pathway
  */
-function newAminoAcid(source){
+function newAminoAcid(imgsource, imgcaption){
     const protein = document.querySelector(".protein-chain");
     const acidImage = document.createElement("span");
     protein.appendChild(acidImage);
-    acidImage.innerHTML = `<img class="amino-acid" src="${source}">`   
+    acidImage.innerHTML = 
+        `<figure>
+            <img class="amino-acid" src="${imgsource}">
+            <figcaption>${imgcaption}</figcaption>
+        </figure>`   
 }
 
 /** Protein structure
@@ -194,247 +199,248 @@ function proteinStructure(nucleicAcid){
             case (protein[i] === "Ala"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Ala-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[0]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Ala-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[0]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Ala-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[0]);
                 }
                 break;
             case (protein[i] === "Arg"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Arg-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[1]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Arg-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[1]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Arg-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[1]);
                 }
                 break;
             case (protein[i] === "Asn"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Asn-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[2]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Asn-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[2]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Asn-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[2]);
                 }
                 break;
             case (protein[i] === "Asp"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Asp-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[3]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Asp-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[3]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Asp-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[3]);
                 }
                 break;
             case (protein[i] === "Cys"):
                 if (i == 0) {
-                    let imageSource = "./amino_acids/acid-start/Cys-start.jpg";
-                    newAminoAcid(imageSource);
+                    let imageSource = "./amino_acids/acid-start/Cys-start.jpg";                    
+                    newAminoAcid(imageSource, captions[4]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Cys-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[4]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Cys-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[4]);
                 }
                 break;
             case (protein[i] === "Gln"):
+                let imageCaption = "Gln";
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Gln-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[5]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Gln-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[5]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Gln-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[5]);
                 }
                 break;
             case (protein[i] === "Glu"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Glu-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[6]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Glu-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[6]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Glu-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[6]);
                 }
                 break;
             case (protein[i] === "Gly"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Gly-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[7]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Gly-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[7]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Gly-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[7]);
                 }
                 break;
             case (protein[i] === "His"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/His-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[8]);
                 } else if (protein.indexOf("His") == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/His-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[8]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/His-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[8]);
                 }
                 break;
             case (protein[i] === "Ile"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Ile-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[9]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Ile-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[9]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Ile-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[9]);
                 }
                 break;
             case (protein[i] === "Leu"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Leu-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[10]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Leu-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[10]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Leu-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[10]);
                 }
                 break;
             case (protein[i] === "Lys"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Lys-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[11]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Lys-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[11]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Lys-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[11]);
                 } 
                 break;
             case (protein[i] === "Met"):
                 if (i == 0) {
                     console.log(protein.indexOf("Met"));
                     let imageSource = "./amino_acids/acid-start/Met-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[12]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Met-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[12]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Met-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[12]);
                 }
                 break;
             case (protein[i] === "Phe"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Phe-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[13]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Phe-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[13]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Phe-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[13]);
                 }
                 break;
             case (protein[i] === "Pro"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Pro-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[14]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Pro-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[14]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Pro-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[14]);
                 }
                 break;
             case (protein[i] === "Ser"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Ser-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[15]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Ser-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[15]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Ser-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[15]);
                 }
                 break;
             case (protein[i] === "Thr"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Thr-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[16]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Thr-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[16]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Thr-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[16]);
                 }
                 break;
             case (protein[i] === "Trp"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Trp-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[17]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Trp-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[17]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Trp-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[17]);
                 }
                 break;
             case (protein[i] === "Tyr"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Tyr-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[18]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Tyr-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[18]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Tyr-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[18]);
                 }
                 break;
             case (protein[i] === "Val"):
                 if (i == 0) {
                     let imageSource = "./amino_acids/acid-start/Val-start.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[19]);
                 } else if (i == protein.length - 1) {
                     let imageSource = "./amino_acids/acid-end/Val-end.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[19]);
                 } else {
                     let imageSource = "./amino_acids/acid-mid/Val-mid.jpg";
-                    newAminoAcid(imageSource);
+                    newAminoAcid(imageSource, captions[19]);
                 }
                 break;
             default:
                 let imageSource = "./amino_acids/stop.jpg";
-                newAminoAcid(imageSource);
+                newAminoAcid(imageSource, captions[20]);
         }
     }
 }

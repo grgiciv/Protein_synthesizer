@@ -10,4 +10,18 @@
 span {
     align-content: flex-start;
     padding-top: 2px;
+    padding-bottom: 20px;
+    position: relative;
+
+}
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    color: red;
+    position: absolute;
+    bottom: 2px;
+    left: 40%;
 }
