@@ -1,4 +1,6 @@
 const dnaFormElement = document.querySelector("#dna-form");
+const DNAchain = document.querySelector('.DNAchain');
+const mRNAchain = document.querySelector(".mRNAchain");
 const proteinChain = document.querySelector('.protein-chain');
 const captions = ["Ala", "Arg", "Asn", "Asp", "Cys", "Gln", "Glu", "Gly", "His", "Ile", "Leu", "Lys", "Met", "Phe", "Pro", "Ser", "Thr", "Trp", "Tyr", "Val", "STOP"];
 
@@ -14,6 +16,7 @@ dnaFormElement.addEventListener('submit', function(event){
         alert("Please use only characters A, T, G or C");
     }
     document.getElementsByName("dna-field")[0].value = '';
+    DNAchain.innerHTML = `DNA: ${DNAinput.join('')}`;
 });
 
 
@@ -55,6 +58,7 @@ function mRNAtranscription(nucleicAcid){
           transcript.push("U")
         }
     }
+    mRNAchain.innerHTML = `mRNA: ${transcript.join('')}`;
     return transcript;
 }
 

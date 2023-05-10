@@ -25,3 +25,10 @@ figcaption {
     bottom: 2px;
     left: 40%;
 }
+
+.mRNAchain, .DNAchain {
+    border: 2px solid green;
+    width: fit-content;
+    padding: 2px;
+    margin-bottom: 2px
+}
