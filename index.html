@@ -10,7 +10,7 @@
 <body>
     <form id="dna-form">
         <label for="dna-field">DNA sequence:</label>
-        <input type="text" name="dna-field" size="25" placeholder="Enter your DNA sequence">
+        <input type="text" name="dna-field" size="25" placeholder="Enter your DNA sequence" pattern="[ACGTacgt]{3,}" title="Must contain at least one triplet of characters A, C, G and T">
         <button type="submit">Synthesize protein</button>
     </form>
     <br>

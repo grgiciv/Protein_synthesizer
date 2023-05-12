@@ -8,15 +8,9 @@ dnaFormElement.addEventListener('submit', function(event){
     event.preventDefault();
     proteinChain.innerHTML = '';
     const DNAinput = event.target.querySelector('[name="dna-field"]').value.toUpperCase().split('');
-    const regex = /[ATCG]/;
-    let result = regex.test(DNAinput);
-    if (result) {
-        proteinStructure(DNAinput);
-    } else {
-        alert("Please use only characters A, T, G or C");
-    }
     document.getElementsByName("dna-field")[0].value = '';
     DNAchain.innerHTML = `DNA: ${DNAinput.join('')}`;
+    proteinStructure(DNAinput);
 });
 
 
