@@ -192,7 +192,95 @@ function newAminoAcid(imgsource, imgcaption){
  */
 function proteinStructure(nucleicAcid){
     protein = proteinSynthesis(nucleicAcid);
-    for (i = 0; i < protein.length; i++){
+    let imageSource = '';
+    if (protein.length == 1) {
+        switch (true){
+            case (protein[0] === "Ala"):
+                imageSource = "./amino_acids/acid-single/Ala.jpg";
+                newAminoAcid(imageSource, captions[0]);
+                break;
+            case (protein[0] === "Arg"):
+                imageSource = "./amino_acids/acid-single/Arg.jpg";
+                newAminoAcid(imageSource, captions[1]);
+                break;
+            case (protein[0] === "Asn"):
+                imageSource = "./amino_acids/acid-single/Asn.jpg";
+                newAminoAcid(imageSource, captions[2]);
+                break;
+            case (protein[0] === "Asp"):
+                imageSource = "./amino_acids/acid-single/Asp.jpg";
+                newAminoAcid(imageSource, captions[3]);
+                break;
+            case (protein[0] === "Cys"):
+                imageSource = "./amino_acids/acid-single/Cys.jpg";
+                newAminoAcid(imageSource, captions[4]);
+                break;
+            case (protein[0] === "Gln"):
+                imageSource = "./amino_acids/acid-single/Gln.jpg";
+                newAminoAcid(imageSource, captions[5]);
+                break;
+            case (protein[0] === "Glu"):
+                imageSource = "./amino_acids/acid-single/Glu.jpg";
+                newAminoAcid(imageSource, captions[6]);
+                break;
+            case (protein[0] === "Gly"):
+                imageSource = "./amino_acids/acid-single/Gly.jpg";
+                newAminoAcid(imageSource, captions[7]);
+                break;
+            case (protein[0] === "His"):
+                imageSource = "./amino_acids/acid-single/His.jpg";
+                newAminoAcid(imageSource, captions[8]);
+                break;
+            case (protein[0] === "Ile"):
+                imageSource = "./amino_acids/acid-single/Ile.jpg";
+                newAminoAcid(imageSource, captions[9]);
+                break;
+            case (protein[0] === "Leu"):
+                imageSource = "./amino_acids/acid-single/Leu.jpg";
+                newAminoAcid(imageSource, captions[10]);
+                break;
+            case (protein[0] === "Lys"):
+                imageSource = "./amino_acids/acid-single/Lys.jpg";
+                newAminoAcid(imageSource, captions[11]);
+                break;
+            case (protein[0] === "Met"):
+                imageSource = "./amino_acids/acid-single/Met.jpg";
+                newAminoAcid(imageSource, captions[12]);
+                break;
+            case (protein[0] === "Phe"):
+                imageSource = "./amino_acids/acid-single/Phe.jpg";
+                newAminoAcid(imageSource, captions[13]);
+                break;
+            case (protein[0] === "Pro"):
+                imageSource = "./amino_acids/acid-single/Pro.jpg";
+                newAminoAcid(imageSource, captions[14]);
+                break;
+            case (protein[0] === "Ser"):
+                imageSource = "./amino_acids/acid-single/Ser.jpg";
+                newAminoAcid(imageSource, captions[15]);
+                break;
+            case (protein[0] === "Thr"):
+                imageSource = "./amino_acids/acid-single/Thr.jpg";
+                newAminoAcid(imageSource, captions[16]);
+                break;
+            case (protein[0] === "Trp"):
+                imageSource = "./amino_acids/acid-single/Trp.jpg";
+                newAminoAcid(imageSource, captions[17]);
+                break;
+            case (protein[0] === "Tyr"):
+                imageSource = "./amino_acids/acid-single/Tyr.jpg";
+                newAminoAcid(imageSource, captions[18]);
+                break;
+            case (protein[0] === "Val"):
+                imageSource = "./amino_acids/acid-single/Val.jpg";
+                newAminoAcid(imageSource, captions[19]);
+                break;
+            default:
+                imageSource = "./amino_acids/stop.jpg";
+                newAminoAcid(imageSource, captions[20]);
+        }
+    } else {
+        for (i = 0; i < protein.length; i++){
         switch(true){
             case (protein[i] === "Ala"):
                 if (i == 0) {
@@ -441,4 +529,6 @@ function proteinStructure(nucleicAcid){
                 newAminoAcid(imageSource, captions[20]);
         }
     }
+    }
+    
 }
