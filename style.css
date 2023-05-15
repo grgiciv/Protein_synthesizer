@@ -1,10 +1,11 @@
-.protein-chain {
+.protein-structure {
     display: flex;
     flex-direction: row;
     border: 2px solid green;
     padding: 5px;
     width: fit-content;
     overflow: visible;
+    margin-bottom: 2px;
 }
 
 span {
@@ -26,7 +27,7 @@ figcaption {
     left: 40%;
 }
 
-.mRNAchain, .DNAchain {
+.DNAchain, .mRNAchain, .protein-chain-3letters {
     border: 2px solid green;
     width: fit-content;
     padding: 2px;

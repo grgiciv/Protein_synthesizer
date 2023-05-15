@@ -1,7 +1,8 @@
 const dnaFormElement = document.querySelector("#dna-form");
 const DNAchain = document.querySelector('.DNAchain');
-const mRNAchain = document.querySelector(".mRNAchain");
-const proteinChain = document.querySelector('.protein-chain');
+const mRNAchain = document.querySelector('.mRNAchain');
+const proteinChain = document.querySelector('.protein-structure');
+const aminoAcidChain = document.querySelector('.protein-chain-3letters');
 const captions = ["Ala", "Arg", "Asn", "Asp", "Cys", "Gln", "Glu", "Gly", "His", "Ile", "Leu", "Lys", "Met", "Phe", "Pro", "Ser", "Thr", "Trp", "Tyr", "Val", "STOP"];
 
 dnaFormElement.addEventListener('submit', function(event){
@@ -168,15 +169,17 @@ function proteinSynthesis(nucleicAcid){
                 break;    
         }
     }
+    aminoAcidChain.innerHTML= `Polypeptide chain (3 letters): ${protein.join('-')}`
     return protein;
 }
 
 /**Creates new amino acid in chain
- * Creates new html elements that contains images of amino acids.
- * @param {String} source represents file pathway
+ * Creates new html elements that contains images and names of amino acids.
+ * @param {String} imgsource represents file pathway
+ * @param {String} imgcaption represents amino acid name
  */
 function newAminoAcid(imgsource, imgcaption){
-    const protein = document.querySelector(".protein-chain");
+    const protein = document.querySelector(".protein-structure");
     const acidImage = document.createElement("span");
     protein.appendChild(acidImage);
     acidImage.innerHTML = 
