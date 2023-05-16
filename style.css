@@ -1,8 +1,20 @@
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    border: red 1px solid;
+    margin: 0px;
+}
+
+p{
+    margin: 0px;
+}
 .protein-structure {
     display: flex;
     flex-direction: row;
     border: 2px solid green;
-    padding: 5px;
+    padding: 5px 10px 5px 10px;
     width: fit-content;
     overflow: visible;
     margin-bottom: 2px;
@@ -11,9 +23,8 @@
 span {
     align-content: flex-start;
     padding-top: 2px;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
     position: relative;
-
 }
 
 figure {
@@ -27,7 +38,7 @@ figcaption {
     left: 40%;
 }
 
-.DNAchain, .mRNAchain, .protein-chain-3letters {
+.DNAchain, .mRNAchain, .protein-chain-3letters, .protein-chain-1letter {
     border: 2px solid green;
     width: fit-content;
     padding: 2px;
