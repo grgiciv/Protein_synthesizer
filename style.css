@@ -3,13 +3,15 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-    border: red 1px solid;
     margin: 0px;
 }
 
 p{
     margin: 0px;
+    text-align: center;
+    
 }
+
 .protein-structure {
     display: flex;
     flex-direction: row;

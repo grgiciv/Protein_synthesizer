@@ -201,8 +201,8 @@ function proteinSynthesis(nucleicAcid){
 /**Creates new amino acid in chain.
  * Creates new html elements that contains images and names of amino acids.
  * @param {String} imgsource represents file pathway
- * @param {String} imgcaption3 represents 3 letter amino acid name
- * @param {String} imgcaption1 represents 1 letter amino acid name
+ * @param {Array} imgcaption3 represents 3 letter amino acid name
+ * @param {Array} imgcaption1 represents 1 letter amino acid name
  */
 function newAminoAcid(imgsource, imgcaption3, imgcaption1){
     const acidImage = document.createElement("span");
